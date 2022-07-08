@@ -93,7 +93,8 @@ def main(options):
 		except KeyboardInterrupt:
 			vprint("\nClosing {}".format(filename))
 		finally:
-			fh.close()
+			if fh != None:
+				fh.close()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser("pvRecorder.py")
