@@ -91,7 +91,8 @@ def main(options):
 				print(message)
 				time.sleep(sleep_period)
 		except KeyboardInterrupt:
-			vprint("\nClosing {}".format(filename))
+			if fh != None:
+				vprint("\nClosing {}".format(filename))
 		finally:
 			if fh != None:
 				fh.close()
