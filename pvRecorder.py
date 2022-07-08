@@ -93,6 +93,8 @@ def main(options):
 		except KeyboardInterrupt:
 			if fh != None:
 				vprint("\nClosing {}".format(filename))
+			else:
+				vprint("\nQuitting")
 		finally:
 			if fh != None:
 				fh.close()
